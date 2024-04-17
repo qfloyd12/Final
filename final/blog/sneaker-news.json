@@ -1,0 +1,40 @@
+{
+    "sneakers": [
+      {
+        "imgSrc": "images/sn1.jpeg",
+        "alt": "Sneaker 1",
+        "title": "FlexStrides",
+        "releaseDate": "Release Date: April 1st, 2024",
+        "description": "Lace up and hit the streets in style! The ReslaDate FlexStrides will be available at select retailers starting April 1st, 2024. Don't miss your chance to step into comfort and versatility."
+      },
+      {
+        "imgSrc": "images/sn2.jpeg",
+        "alt": "Sneaker 2",
+        "title": "TrailTrekks",
+        "releaseDate": "Release Date: May 15th, 2024",
+        "description": "Prepare for your next adventure! The ReslaDate TrailTrekks are set to launch on May 15th, 2024, bringing unmatched traction and durability to your outdoor excursions. Get ready to conquer new trails with confidence."
+      },
+      {
+        "imgSrc": "images/sn3.jpeg",
+        "alt": "Sneaker 3",
+        "title": "PowerPace",
+        "releaseDate": "Release Date: June 30th, 2024",
+        "description": "Ready to unleash your full potential? The ReslaDate PowerPace will be available for purchase starting June 30th, 2024. Elevate your running experience with cutting-edge technology and superior performance."
+      },
+      {
+        "imgSrc": "images/sn4.jpeg",
+        "alt": "Sneaker 4",
+        "title": "StreetSprinters",
+        "releaseDate": "Release Date: August 10th, 2024",
+        "description": "Step up your street style game! The ReslaDate StreetSprinters are arriving in stores on August 10th, 2024. Embrace urban sophistication with these sleek and versatile shoes."
+      },
+      {
+        "imgSrc": "images/sn5.jpeg",
+        "alt": "Sneaker 5",
+        "title": "ZenWalkers",
+        "releaseDate": "Release Date: September 25th, 2024",
+        "description": "Take a stroll in comfort and tranquility! The ReslaDate ZenWalkers will be released on September 25th, 2024, offering unmatched relaxation with every step. Get ready to experience the ultimate walking experience."
+      }
+    ]
+  }
+  

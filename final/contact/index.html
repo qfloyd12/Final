@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q Kicks Vault</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="box-area">
+        <header>
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="#">Q Kicks Vault</a>
+                </div>
+                <button class="hamburger">&#9776;</button>
+                <nav class="nav-links" id="navLinks">
+                    <a href="../index.html">Home</a>
+                    <a href="../shop/index.html">Shop</a>
+                    <a href="../sell/index.html">Sell</a>
+                    <a href="../blog/index.html">Blog</a>
+                    <a href="../contact/index.html">Contact</a>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="container">
+        <div class="left-content">
+
+            <section>
+                <h1>Phone support</h1>
+                <p>For phone support at Q Kick Vaults, feel free to dial our toll-free number [insert legitimate number here] to connect with our dedicated customer support team. If you prefer to remain anonymous or use a fake number, you can contact us at +1 (555) 123-4567, where our representatives will be happy to assist you with any inquiries regarding our kick vaults or services.</p>
+            </section>
+            <br>
+
+            <section>
+             <h1>Electronic Mail</h1>
+            <p>For email support at Q Kick Vaults, please feel free to reach out to us at support@qkickvaults.com. Our dedicated team is ready to assist you with any questions or concerns you may have about our products or services. We're committed to providing you with the support you need for a seamless experience with our kick vaults.</p>
+
+            </section>
+        </div>
+        <div class="right-content">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="1e20b0b8-066f-407b-8878-d89ab2da7bb3" />
+                <input type="hidden" name="redirect" value="https://yourwebsite.com/success" />
+                <input type="hidden" name="subject" value="Contact from Your Website's Contact Form" />
+                <input type="hidden" name="from_name" value="My Website" />
+        
+                <p>
+                    <label for="fname">Name:</label>
+                    <input id="fname" type="text" name="name" placeholder="Your name.." required />
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" name="email" placeholder="Your email.." required />
+                </p>
+                <p>
+                    <label for="subject">Message:</label>
+                    <textarea id="subject" name="message" placeholder="Write something.." required style="height:200px"></textarea>
+                </p>
+                <p>
+                    <button type="submit">Submit Form</button>
+                </p>
+                <p id="result"></p>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="contactme.js"></script>
+</body>
+</html>

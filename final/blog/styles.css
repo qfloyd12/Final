@@ -1,0 +1,275 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+      background-color: #F3EFE0;
+}
+
+nav {
+    float: left;
+    line-height: 100px;
+    margin-left: 3%;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 4px;
+    font-size: 20px;
+    color: black;
+    padding: 0 10px;
+    margin: 0 1px;
+    font-weight: 500;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 100px; 
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background: #9A3334;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    z-index: 999; 
+}
+
+.logo {
+    width: 30%;
+    float: left;
+    text-align: left;
+    line-height: 100px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: fantasy;
+    color: white;
+   
+    letter-spacing: 4px;
+}
+
+nav {
+    float: left;
+    line-height: 100px;
+    margin-left: 3%;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 4px;
+    font-size: 20px;
+    color: black;
+    padding: 0 10px; 
+    margin: 0 1px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.banner-area {
+    background-image: url('images/720x150.gif');
+    background-size: cover;
+    background-position: center center;
+    height: 55vh;
+    width: 100%;
+    margin-top: 100px; 
+}
+
+.banner-area:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7); 
+    z-index: -1;
+}
+
+.banner-area h2 {
+    padding-top: 8%;
+    font-size: 80px;
+    color: white;
+}
+
+.content-area {
+    width: 100%;
+    padding-top: 200px;
+    background: white;
+}
+
+.content-area h2 {
+    text-align: left;
+    font-size: 40px;
+    margin: 0;
+    padding-top: 30px;
+    letter-spacing: 4px;
+}
+
+.content-area p {
+    padding: 2% 0;
+    line-height: 35px;
+    text-align: left;
+}
+
+.image-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.image-row img {
+    width: 25%; 
+    margin: 5px; 
+}
+.sneaker-news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+
+
+img {
+   width: 450px;
+   height: 300px;
+    padding: 10px;
+    object-fit: cover;
+}
+
+.sneaker p{
+    text-align: left;
+}
+
+.sneaker p1{
+    text-align: center;
+}
+
+.sneaker {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        text-align: center;
+    }
+
+    .wrapper {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .logo {
+        width: 100%;
+        float: none;
+        text-align: center;
+        line-height: inherit;
+    }
+
+
+    .banner-area {
+        height: 40vh;
+        margin-top: 70px;
+    }
+
+    .banner-area h2 {
+        font-size: 40px;
+        padding-top: 15%;
+    }
+
+    .content-area {
+        padding-top: 100px;
+    }
+
+    .content-area h2, .content-area p {
+        text-align: center;
+    }
+
+    .image-row, .sneaker-news {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .sneaker {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        padding-top: 100px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .nav-links nav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+
+    .nav-links.active {
+    display: flex; 
+    background-color: #ffffff;
+    top: 100px; 
+    width: 100%; 
+    flex-direction: column;
+    align-items: center; 
+    padding: 5px 0; 
+    margin: auto;
+    }
+
+
+    .nav-links a:last-child {
+                border-bottom: none; 
+}
+}

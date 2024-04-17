@@ -1,0 +1,27 @@
+{
+    "content": {
+      "image": {
+        "src": "images/ssn1.jpeg",
+        "alt": "Big Image"
+      },
+      "textSections": [
+        {
+          "title": "How to sell to us",
+          "paragraphs": [
+            "If you're looking to sell your shoes to our business, the first step is to visit our store during our designated buying hours. Upon arrival, approach our buying desk where one of our trained staff members will greet you and assist you with the selling process. Be sure to bring in the shoes you wish to sell, ensuring they are clean, in good condition, and preferably in a style that aligns with our brand's aesthetic. Our staff will carefully inspect the shoes, checking for any signs of wear and tear, damage, or discrepancies in authenticity. We may also consider factors such as brand popularity, current market demand, and resale potential. Once the evaluation is complete, we will provide you with a fair offer based on our assessment. If you accept the offer, you can choose to receive payment in cash or opt for store credit, which can be used towards future purchases in our store. If not, you're free to take your shoes back with you. Our goal is to ensure a transparent and mutually beneficial transaction for both parties involved."
+          ]
+        },
+        {
+          "title": "Utilizing Store Credit",
+          "list": [
+            "Make Future Purchases: Use store credit towards future purchases, either partially or in full.",
+            "Explore New Products: Use the credit to try out new products they haven't purchased before.",
+            "Gift to Others: Gift the store credit to friends or family members who might enjoy shopping at your store.",
+            "Combine with Other Offers: Use store credit in combination with ongoing promotions or discounts for added savings.",
+            "Upgrade or Exchange: Use the credit to upgrade their current purchase or exchange it for a different item."
+          ]
+        }
+      ]
+    }
+  }
+  

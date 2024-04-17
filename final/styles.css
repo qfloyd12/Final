@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    overflow-x: hidden;
+    background-color: #F3EFE0;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background: #9A3334;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.logo {
+    width: 30%;
+    float: left;
+    text-align: left;
+    line-height: 100px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: fantasy;
+    color: white;
+    letter-spacing: 4px;
+}
+
+nav {
+    float: left;
+    line-height: 100px;
+    margin-left: 3%;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 4px;
+    font-size: 20px;
+    color: black;
+    padding: 0 10px;
+    margin: 0 1px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.banner-area {
+    background-image: url('images/sn3.avif');
+    background-size: cover;
+    background-position: center center;
+    height: 40vh;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.banner-text {
+    padding: 13%;
+    color: #FFFFFF; 
+    font-size: 50px;
+    text-align: center; 
+    text-decoration-thickness: 10px;
+    font-weight: bold;
+}
+
+.banner-area:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #F3EFE0;
+    z-index: -1;
+}
+
+.banner-area h2 {
+    padding-top: 8%;
+    font-size: 80px;
+    background-color: #F3EFE0;
+}
+
+.content-area {
+    width: 100%;
+    padding-top: 0px;
+    background-color: #F3EFE0;
+}
+
+.content-area h2 {
+    text-align: left;
+    font-size: 40px;
+    margin: 0;
+    padding-top: 30px;
+    letter-spacing: 4px;
+}
+
+.image-column {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.image-row img {
+    padding-top: 10px;
+    width: 17%;
+    margin-right: 2.5%; 
+     background-color: #F3EFE0;
+}
+
+.box-area{
+    background-color: #F3EFE0;
+}
+
+.image-container {
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.hover-text {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background-color: rgba(0,0,0,0.5); 
+}
+
+.image-container:hover .hover-text {
+    opacity: 1;
+}
+
+.wrapper h2 {
+    text-align: center;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .logo {
+        width: 100%;
+        float: none;
+        text-align: center;
+        line-height: inherit;
+    }
+
+    .banner-area h2 {
+        font-size: 60px;
+    }
+
+    .content-area h2 {
+        font-size: 30px;
+    }
+
+    .image-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .content-area {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+        background-color: #ffffff;
+        top: 100px;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 5px 0;
+        margin: auto;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+}
+
+
+

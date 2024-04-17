@@ -1,0 +1,72 @@
+{
+  "imageColumns": [
+    {
+      "images": [
+        {
+          "src": "images/shoe1.avif",
+          "alt": "Shoe 1",
+          "color": "red",
+          "size": ["6", "7", "8"],
+          "brand": "nike"
+        },
+        {
+          "src": "images/shoe2.avif",
+          "alt": "Shoe 2",
+          "color": "blue",
+          "size": ["6", "9"],
+          "brand": "adidas"
+        },
+        {
+          "src": "images/shoe3.avif",
+          "alt": "Shoe 3",
+          "color": "green",
+          "size": ["7", "8", "9"],
+          "brand": "puma"
+        }
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "images/shoe4.avif",
+          "alt": "Shoe 4",
+          "color": "black",
+          "size": ["6", "7"],
+          "brand": "reebok"
+        },
+        {
+          "src": "images/shoe5.avif",
+          "alt": "Shoe 5",
+          "color": "red",
+          "size": ["8", "9"],
+          "brand": "nike"
+        },
+        {
+          "src": "images/shoe6.avif",
+          "alt": "Shoe 6",
+          "color": "blue",
+          "size": ["6", "7", "8"],
+          "brand": "adidas"
+        }
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "images/shoe7.avif",
+          "alt": "Shoe 7",
+          "color": "green",
+          "size": ["9"],
+          "brand": "puma"
+        },
+        {
+          "src": "images/shoe8.avif",
+          "alt": "Shoe 8",
+          "color": "black",
+          "size": ["6", "7", "8", "9"],
+          "brand": "reebok"
+        }
+      ]
+    }
+  ]
+}

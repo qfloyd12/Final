@@ -1,0 +1,20 @@
+{
+  "newArrivals": [
+      {
+          "imageName": "Shoe1.avif",
+          "hoverText": "LunarFlex"
+      },
+      {
+          "imageName": "shoe2.avif",
+          "hoverText": "Velocity Stride"
+      },
+      {
+          "imageName": "shoe3.avif",
+          "hoverText": "Nimbus Glide"
+      },
+      {
+          "imageName": "shoe5.avif",
+          "hoverText": "StealthRunner"
+      }
+  ]
+}

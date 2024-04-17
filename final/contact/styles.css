@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: #F3EFE0;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 100;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background: #9A3334;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    z-index: 999; 
+}
+
+.logo {
+    width: 30%;
+    float: left;
+    text-align: left;
+    line-height: 100px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: fantasy;
+    color: white;
+    letter-spacing: 4px;
+}
+
+nav {
+    float: left;
+    line-height: 100px;
+    margin-left: 3%;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 4px;
+    font-size: 20px;
+    color: black;
+    padding: 0 10px; 
+    margin: 0 1px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+}
+
+.left-content {
+    width: 30%;
+    text-align: left;
+    padding: 20px;
+}
+
+.right-content {
+    width: 60%;
+    padding: 20px;
+}
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+}
+  
+input[type=button] {
+    background-color: #9A3334;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+
+
+.container {
+    border-radius:  5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    
+}
+
+#button{
+    align-items: center;
+}
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.right-content {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #9A3334;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: grey;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .logo {
+        width: 100%;
+        float: none;
+        text-align: center;
+        line-height: inherit;
+    }
+
+   
+
+    .container {
+        flex-direction: column;
+    }
+
+    .left-content, .right-content {
+        width: 100%;
+    }
+
+    input[type=text], select, textarea {
+        width: 100%;
+        margin-top: 6px;
+        margin-bottom: 12px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .nav-links nav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+
+    .nav-links.active {
+    display: flex; 
+    background-color: #ffffff;
+    top: 100px; 
+    width: 100%; 
+    flex-direction: column;
+    align-items: center; 
+    padding: 5px 0; 
+    margin: auto;
+    }
+
+
+    .nav-links a:last-child {
+                border-bottom: none; 
+}
+}
