@@ -5,6 +5,8 @@ const fs = require('fs');
 const multer = require('multer');
 const cors = require('cors');
 
+app.use(cors());
+
 const app = express();
 
 
