@@ -27,7 +27,7 @@ mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
 
 
 const initializeSneakerData = () => {
-  const data = fs.readFileSync('/mnt/data/sneaker-news.json', 'utf8');
+  const data = fs.readFileSync('/mnt/data/sneakers', 'utf8');
   const jsonData = JSON.parse(data);
 
   
