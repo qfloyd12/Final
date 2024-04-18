@@ -7,15 +7,15 @@ const cors = require('cors');
 
 const app = express();
 
-// MongoDB URI
+
 const mongoUri = "mongodb+srv://qfloyd:myR7edfSSZug7AZe@atlascluster.gag1v4a.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster"; 
 
-// MongoDB connection
+
 mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB...'))
   .catch(err => console.error('Could not connect to MongoDB...', err));
 
-// Schema definition
+
 const sneakerSchema = new mongoose.Schema({
   imgSrc: String,
   alt: String,
@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname, 'final')));
 app.use(express.json());
 app.use(cors());
 
-// Routes
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'final', 'index.html'));
 });
