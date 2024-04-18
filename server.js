@@ -64,9 +64,9 @@ app.get('/sell', (req, res) => {
   res.sendFile(path.join(__dirname, 'final', 'sell', 'index.html'));
 });
 
-app.get('/blog/sneaker-news', (req, res) => {
-  res.sendFile(path.join(__dirname, 'final', 'sneaker-news.html'));
-});
+app.get('/blog', (req, res) => {
+  res.sendFile(path.join(__dirname, 'final', 'index.html'));
+})
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
