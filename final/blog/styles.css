@@ -291,14 +291,6 @@ img {
     color: #333;
 }
 
-.action-buttons button {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.action-buttons button:first-child {
-    background-color: #f44336;
-}
 
 #supply-section input[type="text"]:not(:first-child) {
     margin-top: 5px;

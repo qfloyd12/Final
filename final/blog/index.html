@@ -23,18 +23,27 @@
                 </nav>
             </div>
         </header>
-        <h1>Sneaker News</h1>
-        <button id="add-link" class="add-link-style" onclick="showSneakerForm()">+</button>
 
-        <form id="sneaker-form" style="display:none;">
-            <input type="text" id="name" placeholder="Sneaker Name" required>
-            <input type="text" id="releaseDate" placeholder="Release Date" required>
-            <input type="text" id="description" placeholder="Description" required>
-            <input type="file" id="image" accept="image/*" required>
-            <button type="submit">Submit</button>
-            <button type="button" onclick="toggleForm()">Cancel</button>
-        </form>
-        
+        <h1>Sneaker News <a href="#" id="add-link" onclick="toggleForm()">+</a></h1>
+
+        <div id="sneaker-form-modal" class="w3-modal">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <span onclick="toggleForm()" class="w3-button w3-display-topright">&times;</span>
+                    <h2>Add Sneaker Information</h2>
+                    <form id="sneaker-form">
+                        <input type="text" id="name" placeholder="Sneaker Name" required>
+                        <input type="text" id="releaseDate" placeholder="Release Date" required>
+                        <input type="text" id="description" placeholder="Description" required>
+                        <input type="file" id="image" accept="image/*" required>
+                        <div class="action-buttons">
+                            <button type="button" onclick="toggleForm()">Cancel</button>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
         <section class="sneaker-news">
         </section>

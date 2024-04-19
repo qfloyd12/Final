@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.getElementById('navLinks');
+    const sneakerFormModal = document.getElementById('sneaker-form-modal');
     const sneakerForm = document.getElementById('sneaker-form');
     const hamburger = document.querySelector('.hamburger');
     const addButton = document.getElementById('add-link');
@@ -9,15 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     addButton.addEventListener('click', () => {
-        sneakerForm.style.display = 'block';
+        sneakerFormModal.style.display = 'block';
     });
 
     document.getElementById('image').addEventListener('change', event => {
         const file = event.target.files[0];
+        const imgPreview = document.getElementById('image-preview'); 
         if (file) {
             const reader = new FileReader();
             reader.onload = function(e) {
-                const imgPreview = document.getElementById('image-preview');
                 imgPreview.src = e.target.result;
                 imgPreview.style.display = 'block';
             };
@@ -44,6 +45,7 @@ function submitSneakerForm() {
     .then(response => response.json())
     .then(data => {
         alert('Sneaker added successfully');
+        sneakerFormModal.style.display = 'none'; 
         fetchSneakers();
     })
     .catch(error => {
@@ -74,12 +76,11 @@ function editSneaker(id) {
     fetch(`/api/sneakers/${id}`)
     .then(response => response.json())
     .then(sneaker => {
-        const form = document.getElementById('sneaker-form');
-        form.style.display = 'block';
+        sneakerFormModal.style.display = 'block';
         document.getElementById('name').value = sneaker.name;
         document.getElementById('releaseDate').value = sneaker.releaseDate;
         document.getElementById('description').value = sneaker.description;
-        const imgPreview = document.getElementById('image-preview');
+        const imgPreview = document.getElementById('image-preview'); 
         imgPreview.src = sneaker.image;
         imgPreview.style.display = 'block';
     })
@@ -94,3 +95,9 @@ function deleteSneaker(id) {
     })
     .catch(err => console.error('Error deleting sneaker:', err));
 }
+
+window.onclick = function(event) {
+    if (event.target === sneakerFormModal) {
+        sneakerFormModal.style.display = 'none';
+    }
+};
