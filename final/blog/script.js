@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.getElementById('navLinks');
 
     // Toggling the navigation links on small screens
-    hamburger.addEventListener('click', function() {
+    hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
 
@@ -19,29 +19,15 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Received data:', data);  // Log the data to debug what is received
             const sneakerSection = document.querySelector('.sneaker-news');
             if (sneakerSection) {
-                data.sneakers.forEach(sneaker => {
-                    const sneakerDiv = document.createElement('div');
-                    sneakerDiv.className = 'sneaker';
-
-                    const img = document.createElement('img');
-                    img.src = sneaker.imgSrc;
-                    img.alt = sneaker.alt;
-                    sneakerDiv.appendChild(img);
-
-                    const title = document.createElement('h2');
-                    title.textContent = sneaker.title;
-                    sneakerDiv.appendChild(title);
-
-                    const releaseDate = document.createElement('p');
-                    releaseDate.textContent = sneaker.releaseDate;
-                    sneakerDiv.appendChild(releaseDate);
-
-                    const description = document.createElement('p');
-                    description.textContent = sneaker.description;
-                    sneakerDiv.appendChild(description);
-
-                    sneakerSection.appendChild(sneakerDiv);
-                });
+                const html = data.sneakers.map(sneaker => `
+                    <div class="sneaker">
+                        <img src="${sneaker.image}" alt="${sneaker.alt}">
+                        <h2>${sneaker.name}</h2>
+                        <p>${sneaker.releaseDate}</p>
+                        <p>${sneaker.description}</p>
+                    </div>
+                `).join('');
+                sneakerSection.innerHTML = html;
             } else {
                 console.error('Sneaker section div not found.');
             }
