@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Q Kicks Vault</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <div class="box-area">
         <header>
@@ -22,18 +23,23 @@
                 </nav>
             </div>
         </header>
+        <h1>Sneaker News</h1>
+        <button id="add-link" class="add-link-style" onclick="showSneakerForm()">+</button>
 
-        <br>
-
-        <h1>Sneaker news</h1> 
+        <form id="sneaker-form" style="display:none;">
+            <input type="text" id="name" placeholder="Sneaker Name" required>
+            <input type="text" id="releaseDate" placeholder="Release Date" required>
+            <input type="text" id="description" placeholder="Description" required>
+            <input type="file" id="image" accept="image/*" required>
+            <button type="submit">Submit</button>
+            <button type="button" onclick="toggleForm()">Cancel</button>
+        </form>
+        
 
         <section class="sneaker-news">
-            
         </section>
-    </div> 
+    </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
