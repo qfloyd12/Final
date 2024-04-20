@@ -13,19 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         sneakerFormModal.style.display = 'block';
     });
 
-    document.getElementById('image').addEventListener('change', event => {
-        const file = event.target.files[0];
-        const imgPreview = document.getElementById('image-preview'); 
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                imgPreview.src = e.target.result;
-                imgPreview.style.display = 'block';
-            };
-            reader.readAsDataURL(file);
-        }
-    });
-
     sneakerForm.addEventListener('submit', function(event) {
         event.preventDefault();
         submitSneakerForm();
@@ -33,6 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetchSneakers();
 });
+
+function toggleForm() {
+    const modal = document.getElementById('sneaker-form-modal');
+    modal.style.display = (modal.style.display === 'block' ? 'none' : 'block');
+}
 
 function submitSneakerForm() {
     const formData = new FormData(document.getElementById('sneaker-form'));
@@ -45,7 +37,7 @@ function submitSneakerForm() {
     .then(response => response.json())
     .then(data => {
         alert('Sneaker added successfully');
-        sneakerFormModal.style.display = 'none'; 
+        sneakerFormModal.style.display = 'none';
         fetchSneakers();
     })
     .catch(error => {
@@ -72,32 +64,57 @@ function fetchSneakers() {
     .catch(err => console.error('Failed to fetch sneakers:', err));
 }
 
-function editSneaker(id) {
-    fetch(`/api/sneakers/${id}`)
+function editSneaker(sneakerId) {
+    const modal = document.getElementById('edit-sneaker-form-modal');
+    modal.style.display = 'block';
+
+    fetch(`/api/sneakers/${sneakerId}`)
     .then(response => response.json())
-    .then(sneaker => {
-        sneakerFormModal.style.display = 'block';
-        document.getElementById('name').value = sneaker.name;
-        document.getElementById('releaseDate').value = sneaker.releaseDate;
-        document.getElementById('description').value = sneaker.description;
-        const imgPreview = document.getElementById('image-preview'); 
-        imgPreview.src = sneaker.image;
-        imgPreview.style.display = 'block';
+    .then(data => {
+        document.getElementById('edit-id').value = sneakerId;
+        document.getElementById('edit-name').value = data.name;
+        document.getElementById('edit-releaseDate').value = data.releaseDate;
+        document.getElementById('edit-description').value = data.description;
+
+        const imagePreview = document.getElementById('edit-image-preview');
+        if (data.image) {
+            imagePreview.src = data.image;
+            imagePreview.style.display = 'block';
+        }
     })
     .catch(err => console.error('Failed to fetch sneaker details:', err));
 }
 
-function deleteSneaker(id) {
-    fetch(`/api/sneakers/${id}`, { method: 'DELETE' })
-    .then(() => {
-        alert('Sneaker deleted successfully');
-        fetchSneakers();
+document.getElementById('edit-sneaker-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    formData.append('image', document.getElementById('edit-image').files[0]);
+
+    fetch(`/api/sneakers/${document.getElementById('edit-id').value}`, {
+        method: 'PUT',
+        body: formData
     })
-    .catch(err => console.error('Error deleting sneaker:', err));
+    .then(response => response.json())
+    .then(data => {
+        alert('Sneaker updated successfully');
+        toggleEditForm();
+        fetchSneakers(); // Refresh the list
+    })
+    .catch(error => {
+        console.error('Error updating sneaker:', error);
+    });
+});
+
+function toggleEditForm() {
+    const modal = document.getElementById('edit-sneaker-form-modal');
+    modal.style.display = (modal.style.display === 'block' ? 'none' : 'block');
 }
 
 window.onclick = function(event) {
-    if (event.target === sneakerFormModal) {
+    const sneakerFormModal = document.getElementById('sneaker-form-modal');
+    const editSneakerFormModal = document.getElementById('edit-sneaker-form-modal');
+    if (event.target === sneakerFormModal || event.target === editSneakerFormModal) {
         sneakerFormModal.style.display = 'none';
+        editSneakerFormModal.style.display = 'none';
     }
 };

@@ -26,6 +26,7 @@
 
         <h1>Sneaker News <a href="#" id="add-link" onclick="toggleForm()">+</a></h1>
 
+        <!-- Add Sneaker Modal -->
         <div id="sneaker-form-modal" class="w3-modal">
             <div class="w3-modal-content">
                 <div class="w3-container">
@@ -45,6 +46,28 @@
             </div>
         </div>
 
+        <!-- Edit Sneaker Modal -->
+        <div id="edit-sneaker-form-modal" class="w3-modal">
+            <div class="w3-modal-content">
+                <div class="w3-container">
+                    <span onclick="toggleEditForm()" class="w3-button w3-display-topright">&times;</span>
+                    <h2>Edit Sneaker Information</h2>
+                    <form id="edit-sneaker-form">
+                        <input type="hidden" id="edit-id">
+                        <input type="text" id="edit-name" placeholder="Sneaker Name" required>
+                        <input type="text" id="edit-releaseDate" placeholder="Release Date" required>
+                        <input type="text" id="edit-description" placeholder="Description" required>
+                        <input type="file" id="edit-image" accept="image/*">
+                        <img id="edit-image-preview" src="" alt="Sneaker Image" style="display: none; width: 100%; max-width: 200px;">
+                        <div class="action-buttons">
+                            <button type="button" onclick="toggleEditForm()">Cancel</button>
+                            <button type="submit">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <section class="sneaker-news">
         </section>
     </div>
@@ -52,3 +75,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
